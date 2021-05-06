@@ -52,8 +52,8 @@ async def _(event):
     )
 
 
-@bot.on(admin_cmd(pattern="ping$"))
-@bot.on(sudo_cmd(pattern="ping$", allow_sudo=True))
+@bot.on(admin_cmd(pattern="test$"))
+@bot.on(sudo_cmd(pattern="test$", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
