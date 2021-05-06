@@ -58,21 +58,21 @@ async def _(event):
     if event.fwd_from:
         return
     start = datetime.now()
-    event = await edit_or_reply(event, "<b><i>☞ Pong!</b></i>", "html")
+    event = await edit_or_reply(event, "<b><i>🏓 Pong!</b></i>", "html")
     end = datetime.now()
     ms = (end - start).microseconds / 1000
     await event.edit(
-        f"<b><i>☞ Pong</b></i>\n➥ {ms}\n➥ <b><i>Bot of {hmention}</b></i>",
+        f"<b><i>🏓 Pong</b></i>\n📶 {ms}\n🤖 <b><i>Bot of {hmention}</b></i>",
         parse_mode="html",
     )
 
 
 CMD_HELP.update(
     {
-        "ping": "__**PLUGIN NAME :** Ping__\
+        "ping": "__**PLUGIN NAME :** Test__\
     \n\n📌** CMD ➥** `.fping`\
     \n**USAGE   ➥  **A kind ofping with extra animation\
-    \n\n📌** CMD ➥** `.ping`\
+    \n\n📌** CMD ➥** `.test`\
     \n**USAGE   ➥  **Shows you the ping speed of server"
     }
 )
