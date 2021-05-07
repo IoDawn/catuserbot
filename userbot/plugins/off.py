@@ -108,15 +108,15 @@ async def on_afk(event):
         msg = None
         if link and reason:
             message_to_reply = (
-                f"**I am AFK**\n\n**AFK Since :** `{endtime}`\n**Reason : **{reason}"
+                f"**Saya sedang off**\n\n**Off Sejak :** `{endtime}`\n**Reason : **{reason}"
             )
         elif reason:
             message_to_reply = (
-                f"**I am AFK\n\nAFK Since :** `{endtime}`\n**Reason : **`{reason}`"
+                f"**Gua lagi off\n\noff dari :** `{endtime}`\n**Reason : **`{reason}`"
             )
         else:
             message_to_reply = (
-                f"`I am AFK\n\nAFK Since :{endtime}\nReason : Not Mentioned ( ಠ ʖ̯ ಠ)`"
+                f"`Gua lagi off\n\noff dari :{endtime}\nReason : Not Mentioned ( ಠ ʖ̯ ಠ)`"
             )
         if event.chat_id not in Config.UB_BLACK_LIST_CHAT:
             msg = await event.reply(message_to_reply)
@@ -187,8 +187,8 @@ async def _(event):
 
 CMD_HELP.update(
     {
-        "afk": "__**PLUGIN NAME :** Afk__\
-\n\n📌** CMD ➥** `.afk` [Optional Reason]\
+        "afk": "__**PLUGIN NAME :** Off__\
+\n\n📌** CMD ➥** `.off` [Optional Reason]\
 \n**USAGE   ➥  **Sets you as afk.\nReplies to anyone who tags/PM's \
 you telling them that you are AFK(reason)\n\n__Switches off AFK when you type back anything, anywhere.__\
 \n\n**Note :** If you want AFK with hyperlink use [ ; ] after reason, then paste the media link.\
